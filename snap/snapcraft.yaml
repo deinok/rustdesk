@@ -27,4 +27,5 @@ parts:
       - "yasm"
     plugin: "rust"
     source: "."
-    source-submodules: true
+    source-submodules:
+      - "libs/hbb_common"
