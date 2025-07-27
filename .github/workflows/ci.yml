@@ -23,6 +23,7 @@ on:
       - "res/**"
       - "appimage/**"
       - "flatpak/**"
+      - "snap/**"
 
 jobs:
   # ensure_cargo_fmt:
