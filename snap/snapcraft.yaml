@@ -2,7 +2,8 @@ grade: "stable"
 name: "rustdesk"
 version: "1.4.1"
 summary: "An open-source remote desktop application designed for self-hosting"
-description: "Yet another remote desktop solution, written in Rust. Works out of the box with no configuration required>base: "core24"
+description: "Yet another remote desktop solution, written in Rust. Works out of the box with no configuration required"
+base: "core24"
 confinement: "devmode" # use 'strict' once you have the right plugs and slots
 parts:
   rustdesk:
