@@ -1,13 +1,8 @@
+grade: "stable"
 name: "rustdesk"
 version: "1.4.1"
-summary: "An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer."
-description: |
-  This is my-snap's description. You have a paragraph or two to tell the
-  most important story about your snap. Keep it under 100 words though,
-  we live in tweetspace and your description wants to look good in the snap
-  store.
-
-base: "core24"
+summary: "An open-source remote desktop application designed for self-hosting"
+description: "Yet another remote desktop solution, written in Rust. Works out of the box with no configuration required>base: "core24"
 confinement: "devmode" # use 'strict' once you have the right plugs and slots
 parts:
   rustdesk:
