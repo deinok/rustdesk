@@ -26,5 +26,15 @@ parts:
       - "libxfixes-dev"
       - "wget"
       - "yasm"
+    override-build: |
+      git clone https://github.com/microsoft/vcpkg
+      cd vcpkg
+      git checkout 2023.04.15
+      cd ..
+      vcpkg/bootstrap-vcpkg.sh
+      export VCPKG_ROOT=$HOME/vcpkg
+      vcpkg/vcpkg install libvpx libyuv opus aom
+
+      craftctl default
     plugin: "rust"
     source: "."
