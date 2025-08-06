@@ -11,4 +11,5 @@ parts:
     source-type: "deb"
     stage-packages:
     - "libc6"
+    - "libgtk-3-0"
 version: "1.4.1"
