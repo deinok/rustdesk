@@ -1,31 +1,11 @@
-grade: "stable"
-name: "rustdesk"
-version: "1.4.1"
-summary: "An open-source remote desktop application designed for self-hosting"
-description: "Yet another remote desktop solution, written in Rust. Works out of the box with no configuration required"
 base: "core24"
 confinement: "devmode" # use 'strict' once you have the right plugs and slots
+description: "Yet another remote desktop solution, written in Rust. Works out of the box with no configuration required"
+grade: "stable"
+name: "rustdesk"
+summary: "An open-source remote desktop application designed for self-hosting"
 parts:
   rustdesk:
-    build-packages:
-      - "clang"
-      - "cmake"
-      - "curl"
-      - "g++"
-      - "gcc"
-      - "git"
-      - "nasm"
-      - "libasound2-dev"
-      - "libgstreamer1.0-dev"
-      - "libgtk-3-dev"
-      - "libpulse-dev"
-      - "libxdo-dev"
-      - "libxcb-randr0-dev"
-      - "libxcb-shape0-dev"
-      - "libxcb-xfixes0-dev"
-      - "libxfixes-dev"
-      - "wget"
-      - "yasm"
     override-build: |
       git clone https://github.com/microsoft/vcpkg
       cd vcpkg
@@ -36,5 +16,6 @@ parts:
       vcpkg/vcpkg install libvpx libyuv opus aom
 
       craftctl default
-    plugin: "rust"
+    plugin: "dump"
     source: "."
+version: "1.4.1"
