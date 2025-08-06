@@ -6,16 +6,7 @@ name: "rustdesk"
 summary: "An open-source remote desktop application designed for self-hosting"
 parts:
   rustdesk:
-    override-build: |
-      git clone https://github.com/microsoft/vcpkg
-      cd vcpkg
-      git checkout 2023.04.15
-      cd ..
-      vcpkg/bootstrap-vcpkg.sh
-      export VCPKG_ROOT=$HOME/vcpkg
-      vcpkg/vcpkg install libvpx libyuv opus aom
-
-      craftctl default
     plugin: "dump"
-    source: "."
+    source: "./rustdesk.deb"
+    source-type: "deb"
 version: "1.4.1"
