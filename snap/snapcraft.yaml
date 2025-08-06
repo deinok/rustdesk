@@ -9,4 +9,6 @@ parts:
     plugin: "dump"
     source: "./rustdesk.deb"
     source-type: "deb"
+    stage-packages:
+    - "libc6"
 version: "1.4.1"
